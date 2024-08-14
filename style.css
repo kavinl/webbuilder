@@ -1,14 +1,14 @@
 /* General Styling */
 h1 {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 20px;
     font-weight: bold;
-    text-align:center
-}
-
-body {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  body {
     font-family: Helvetica, sans-serif;
-    margin: 20px;
+    margin: 3;
   }
   
   /* Form Styling */
@@ -16,24 +16,26 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 100%; /* Make the form full width */
   }
   
   label {
     font-weight: bold;
   }
   
-  input {
+  input,
+  button {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%; /* Make inputs and buttons full width */
   }
   
   button {
-    padding: 10px 20px;
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
   }
   
@@ -43,5 +45,13 @@ body {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+  }
+  
+  /* Media Query for Smaller Screens */
+  @media (max-width: 768px) {
+    /* Adjust font sizes */
+    h1 {
+      font-size: 24px;
+    }
   }
   
