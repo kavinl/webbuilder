@@ -1,7 +1,7 @@
 function updateOutput() {
   const title = encodeURIComponent(document.getElementById("title").value);
   const subtitle = encodeURIComponent(document.getElementById("subtitle").value);
-  const body = btoa(document.getElementById("body").value); // Encode body as Base64
+  const body = encodeURIComponent(document.getElementById("body"); // Encode body as Base64
   let link = encodeURIComponent(document.getElementById("link").value);
   let imagelink = document.getElementById("image-link").value;
 
