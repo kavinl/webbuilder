@@ -9,7 +9,7 @@ function updateOutput() {
   
     const outputDiv = document.getElementById("output");
     outputDiv.innerHTML = `
-      <h2>https://mobile-web-hazel.vercel.app/?title=${title}&subititle=${subtitle}&body=${body}&link=%20${link}&image=${imagelink}</p>
+      <h2>https://mobile-web-hazel.vercel.app/?title=${title}&subtitle=${subtitle}&body=${body}&link=%20${link}&image=${imagelink}</p>
 
     
     `;
