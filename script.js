@@ -21,7 +21,7 @@ function updateOutput() {
   // **Security:** Avoid embedding raw URLs in innerHTML. Create an anchor element instead.
   const generatedLink = document.createElement('a');
   generatedLink.href = `https://mobile-web-hazel.vercel.app/?title=${title}&subtitle=${subtitle}&body=${body}&link=${link}&image=${imagelink}`;
-  generatedLink.textContent = 'Click here to view your mobile-friendly content';
+  generatedLink.textContent = 'Click here to view your silly mobile website';
   generatedLink.target = '_blank'; // Open in a new tab
 
   // Clear previous content (optional)
