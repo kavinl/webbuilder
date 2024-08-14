@@ -1,13 +1,18 @@
 function updateOutput() {
   const title = encodeURIComponent(document.getElementById("title").value);
   const subtitle = encodeURIComponent(document.getElementById("subtitle").value);
-  const body = encodeURIComponent(document.getElementById("body").value);
+  const body = btoa(document.getElementById("body").value); // Encode body as Base64
   let link = encodeURIComponent(document.getElementById("link").value);
-  const imagelink = encodeURIComponent(document.getElementById("image-link").value);
+  let imagelink = document.getElementById("image-link").value;
 
   // Ensure link starts with https://
   if (!link.startsWith('https://')) {
     link = 'https://' + link;
+  }
+
+  // Use placeholder image if imagelink is empty
+  if (!imagelink) {
+    imagelink = "https://img.freepik.com/free-photo/beautiful-shot-white-british-shorthair-kitten_181624-57681.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1723507200&semt=ais_hybrid";
   }
 
   // Create the final output with a clear message and clickable link
